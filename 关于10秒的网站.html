@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> 十秒钟能发生什么？</title>
+    <meta charset="utf-8">
+    <meta
+    name="author"
+    content="Even">
+  <meta
+    name="description"
+    content="What can happen in ten seconds?">
+
+    <link rel="icon"
+    href="10.jpg">
+    <style>
+        .text-style{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .dark-overlay {
+            position: fixed; /* 将区域固定在页面上 */
+            top:o;
+            bottom: 0; /* 距离页面底部的距离为0 */
+            left: 70%; /* 位于页面左侧 */
+            width: 80%; /* 宽度占满整个页面 */
+            height: 1500px; /* 设置高度 */
+            background-color: rgba(82, 73, 73, 0.5); /* 设置深色背景颜色，并设置透明度为50% */
+            z-index: 1; /* 确保位于其他内容的上方 */
+            pointer-events: none;
+        }
+
+        a {
+            color: white; /* 设置链接颜色为白色 */
+            text-decoration: none; /* 去除下划线 */
+        }
+
+        /* 设置底部背景图片 */
+        body {
+            background-image: url('模糊数字背景.png'); /* 替换 'background.jpg' 为您的背景图片路径 */
+            background-size: cover; /* 使背景图片覆盖整个页面 */
+            background-position: center; /* 居中显示背景图片 */
+            height: 100vh; /* 设置页面高度为视窗高度 */
+            margin: 0; /* 去除默认的页面边距 */
+        }
+
+        .color-block {
+            width: 100px; /* 设置色块宽度 */
+            height: 60px; /* 设置色块高度 */
+            background-color: #670808; /* 设置色块颜色为红色 */
+            text-align: center; /* 文字居中 */
+            line-height:60px;/* 文字居中 */
+            /* 文字垂直居中 */
+            color: white; /* 文字颜色为白色 */
+            font-size: 20px; /* 设置文字大小 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+        }
+
+        .color-block2 {
+            width: 200px; /* 设置色块宽度 */
+            height: 60px; /* 设置色块高度 */
+            background-color: #670808; /* 设置色块颜色为红色 */
+            text-align: center; /* 文字居中 */
+            line-height:60px;/* 文字居中 */
+            /* 文字垂直居中 */
+            color: white; /* 文字颜色为白色 */
+            font-size: 20px; /* 设置文字大小 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+        }
+
+        #embedded {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* 设置嵌入网页的宽度 */
+    height: 200px; /* 设置嵌入网页的高度 */
+  }
+
+</style>
+
+
+</head>
+
+<body style="background-color:rgb(255, 255, 255);">
+
+    <div class="dark-overlay" onclick="event.stopPropagation();"></div>
+
+    <script>
+        alert("What can happen in ten seconds?")
+        function openPopup(){
+        }
+    </script> 
+
+    <img style="width: 1800px;position: absolute;top: 0%;left: 0%;z-index: -1;" src="模糊数字背景.png" >
+
+   
+<h1 class="text-style" style="position: fixed;top:5%;color: antiquewhite;"><em>
+    关于10秒钟“陷阱”  
+</h1>
+
+<p style="color: antiquewhite;position: absolute;top:350px;left:20px;">你有在互联网上陷入“十秒钟”陷阱吗？
+    <br>
+    比如说，在玩游戏的时候看十秒钟广告可以复活，在平台看十秒直播可以获得0.01元，看十秒钟广告可以免费读小说、用需要付费的笔刷等等……
+    <br>
+    <br>
+    这种现象被称为“广告触发奖励”（Ad-triggered rewards）或“奖励广告”（Reward ads）。
+    <br>
+    在游戏和其他应用程序中，开发者会通过向用户提供观看广告的机会来提高用户参与度，并以此作为盈利的一种方式。
+    <br>
+    用户观看广告后可以获得游戏内货币、复活机会、解锁内容等奖励，而开发者则会从广告商那里获得收益。
+    <br>
+    这种模式通常被视为一种广告变现策略，同时也为用户提供了免费获取虚拟商品或服务的途径，从而促进了应用的用户体验和留存率。
+    <br>
+    我用“陷阱”这个词来形容此现象，是想引起人们对这种现象的警惕和关注。它可能会导致人们对时间的不当利用，
+    <br>因为在互联网世界里，人们往往会不知不觉地花费大量时间在短暂的活动上，而这些活动通常并不产生实质性的价值。
+    </p>
+
+    <p style="color: rgb(255, 0, 0);position: absolute;top:650px;left:20px;font-size: 20px;font-weight: bold;">
+        我们在网络上的“十秒钟”还可以通过很多有趣的方式度过！
+
+<div id="embedded">
+  <iframe src="点我.html" width="100%" height="100%" frameborder="0"></iframe>
+</div>
+<script>
+  // 在页面加载后设置嵌入网页的初始位置和速度
+  window.onload = function() {
+    var embedded = document.getElementById("embedded");
+    var speedX = 1; // 设置水平速度
+    var speedY = 1; // 设置垂直速度
+    var posX = 0; // 初始水平位置
+    var posY = 0; // 初始垂直位置
+    
+    // 定义一个动画函数，在每个帧更新嵌入网页的位置
+    function animate() {
+      posX += speedX; // 更新水平位置
+      posY += speedY; // 更新垂直位置
+      embedded.style.left = posX + "px"; // 更新水平位置
+      embedded.style.top = posY + "px"; // 更新垂直位置
+      
+      // 当嵌入网页碰到浏览器窗口边界时反弹
+      if (posX <= 0 || posX >= window.innerWidth - embedded.offsetWidth) {
+        speedX *= -1; // 水平速度取反
+      }
+      if (posY <= 0 || posY >= window.innerHeight - embedded.offsetHeight) {
+        speedY *= -1; // 垂直速度取反
+      }
+      
+      // 在下一个动画帧继续执行动画
+      requestAnimationFrame(animate);
+    }
+    
+    // 开始执行动画
+    animate();
+  };
+</script>
+
+
+
+
+    <div style="position: absolute;top:100px;left: 1250px;color: antiquewhite;font-size: 16px;">
+        原来十秒可以这样度过……
+    </div>
+
+<div class="color-block" style="position: absolute;top:200px;left: 1250px;">
+    小游戏
+</div>
+
+<a href="游戏1 10秒挑战.html" target="_blank">
+    <img style="position:absolute;top:300px;left: 1250px;z-index: 2;" src="游戏1.jpg" width="380">
+</a>
+<a href="游戏1 10秒挑战.html" style="position:absolute;top:708px;left: 1250px;font-size: 20px;z-index: 2;">
+    10秒挑战游戏</a>
+    <a href="游戏1 10秒挑战.html" style="position:absolute;top:750px;left: 1250px;font-size: 16px;">
+        《10秒挑战游戏》规则简单明了，只需按下按钮并努力通过手速和反应能力达到10.000秒，
+        因此非常容易上手，适合各个年龄段的玩家。玩家可以反复尝试，不断挑战自己的极限，
+        增加了游戏的可玩性和耐玩性；也可以与朋友或其他玩家进行比赛谁能按到更接近的数字。
+        <br>
+    你成功凝聚了自己十秒钟的注意力！</a>
+
+
+    <a href="游戏2 中午吃什么.html" target="_blank">
+        <img style="position:absolute;top:980px;left: 1250px;z-index: 2;" src="游戏2.jpg" width="380">
+    </a>
+    <a href="游戏2 中午吃什么.html" style="position:absolute;top:1388px;left: 1250px;font-size: 20px;z-index: 2;">
+        中午吃什么？</a>
+        <a href="游戏2 中午吃什么.html" style="position:absolute;top:1430px;left: 1250px;font-size: 16px;">
+            不知道今天中午吃什么？有选择困难症？花十秒钟来完成这个世纪难题吧！
+            打开这个小游戏就不用愁今天吃什么咯，让命运来帮你选择~有100种选项！
+     </a>
+
+     <a href="游戏3random dot.html" target="_blank">
+        <img style="position:absolute;top:1570px;left: 1250px;z-index: 2;" src="游戏3.jpg" width="380">
+    </a>
+    <a href="游戏3random dot.html" style="position:absolute;top:1978px;left: 1250px;font-size: 20px;z-index: 2;">
+        random dot</a>
+        <a href="游戏3random dot.html" style="position:absolute;top:2020px;left: 1250px;font-size: 16px;">
+            在这个随机出现小圆点的页面中，你是一个白色的可以自由移动的小圆点。
+            在这一刻忘记做人的烦恼，享受做一颗无忧忧虑的小圆点吧！
+     </a>
+
+     <a href="游戏4 广告mouse.html" target="_blank">
+        <img style="position:absolute;top:2160px;left: 1250px;z-index: 2;" src="游戏4.jpg" width="380">
+    </a>
+    <a href="游戏4 广告mouse.html" style="position:absolute;top:2568px;left: 1250px;font-size: 20px;z-index: 2;">
+        广告鼠标轨迹</a>
+        <a href="游戏4 广告mouse.html" style="position:absolute;top:2610px;left: 1250px;font-size: 16px;">
+            利用鼠标轨迹绘制出各种抽象的线条、图案或具体的文字，创作自己的抽象充满广告的页面。
+     </a>
+
+     <a href="游戏5 生日.html" target="_blank">
+        <img style="position:absolute;top:2750px;left: 1250px;z-index: 2;" src="游戏5.jpg" width="380">
+    </a>
+    <a href="游戏5 生日.html" style="position:absolute;top:3158px;left: 1250px;font-size: 20px;z-index: 2;">
+        小彩蛋🎉</a>
+        <a href="游戏5 生日.html" style="position:absolute;top:3200px;left: 1250px;font-size: 16px;">
+            10秒钟还能干什么呢？是不是可以对你的朋友你的家人说一句真诚的祝福呀。
+     </a>
+
+
+
+
+     <div class="color-block2" style="position: absolute;top:3360px;left: 1250px;">
+        宝藏网站分享
+    </div>
+
+    <a href="https://sharkle.com/" target="_blank">
+        <img style="position:absolute;top:3460px;left: 1250px;z-index: 2;" src="网页1.jpg" width="380">
+    </a>
+    <a href="https://sharkle.com/" style="position:absolute;top:3868px;left: 1250px;font-size: 20px;z-index: 2;">
+        盲盒网页</a>
+        <a href="https://sharkle.com/" style="position:absolute;top:3910px;left: 1250px;font-size: 16px;">
+            喜欢开盲盒的刺激吗？打开这个网站点击中间的小圈就会随机跳转到未知的网页，每点击一次就会出现不同的页面，都是超级棒的网站！
+            <br>
+            十秒钟带你发现一个高质量网站！
+     </a>
+
+    <a href="https://www.xiwnn.com/piano/" target="_blank">
+        <img style="position:absolute;top:4070px;left: 1250px;z-index: 2;" src="网页2.jpg" width="380">
+    </a>
+    <a href="https://www.xiwnn.com/piano/" style="position:absolute;top:4478px;left: 1250px;font-size: 20px;z-index: 2;">
+        弹钢琴</a>
+        <a href="https://www.xiwnn.com/piano/" style="position:absolute;top:4520px;left: 1250px;font-size: 16px;">
+            用电脑上的键盘代替钢琴键或者用鼠标点击！可以录制，有社区可以和网友交流，请教曲子。
+            <br>
+            十秒钟弹奏一首钢琴曲吧！
+     </a>
+
+
+     <a href="https://www.meteorshowers.org/" target="_blank">
+        <img style="position:absolute;top:4660px;left: 1250px;z-index: 2;" src="网页3.jpg" width="380">
+    </a>
+    <a href="https://www.meteorshowers.org/" style="position:absolute;top:5068px;left: 1250px;font-size: 20px;z-index: 2;">
+        遨游宇宙</a>
+        <a href="https://www.meteorshowers.org/" style="position:absolute;top:5110px;left: 1250px;font-size: 16px;">
+            可以看流星，遨游太阳系。可以选择不同视角：太阳系、跟随地球或是在地球上看，可以3D用鼠标拖动旋转观测宇宙！
+          
+     </a>
+
+     <a href="https://aidn.jp/mikutap/" target="_blank">
+        <img style="position:absolute;top:5250px;left: 1250px;z-index: 2;" src="网页4.jpg" width="380">
+    </a>
+    <a href="https://aidn.jp/mikutap/" style="position:absolute;top:5658px;left: 1250px;font-size: 20px;z-index: 2;">
+        听miku唱歌</a>
+        <a href="https://aidn.jp/mikutap/" style="position:absolute;top:5700px;left: 1250px;font-size: 16px;">
+            ai音乐生成网站，是歌姬初音未来的声音，配色也是，非常小清新的画面和音乐，
+            只要点击屏幕就能生成音乐和随机动画。不同的点击或是滑动鼠标方式生成的音乐都不同！
+          <br>
+          十秒钟为自己创作一首歌吧！
+     </a>
+
+     <a href="https://vue-color-avatar.vercel.app/" target="_blank">
+        <img style="position:absolute;top:5870px;left: 1250px;z-index: 2;" src="网页5.jpg" width="380">
+    </a>
+    <a href="https://vue-color-avatar.vercel.app/" style="position:absolute;top:6278px;left: 1250px;font-size: 20px;z-index: 2;">
+        生成自己的头像</a>
+        <a href="https://vue-color-avatar.vercel.app/" style="position:absolute;top:6320px;left: 1250px;font-size: 16px;">
+            开源的矢量风格头像生成器，可以搭配不同的素材组件，生成自己的个性化头像！
+          
+     </a>
+
+
+     <a href="https://color.method.ac/" target="_blank">
+        <img style="position:absolute;top:6460px;left: 1250px;z-index: 2;" src="网页6.jpg" width="380">
+    </a>
+    <a href="https://color.method.ac/" style="position:absolute;top:6868px;left: 1250px;font-size: 20px;z-index: 2;">
+        测测色感</a>
+        <a href="https://color.method.ac/" style="position:absolute;top:6910px;left: 1250px;font-size: 16px;">
+        一个有趣的色彩游戏，可以测试你对色彩的分辨及匹配能力，适合美术生和设计师测测自己的色感！
+     </a>
+
+
+     <a href="https://bubblespop.netlify.app/" target="_blank">
+        <img style="position:absolute;top:7050px;left: 1250px;z-index: 2;" src="网页7.jpg" width="380">
+    </a>
+    <a href="https://bubblespop.netlify.app/" style="position:absolute;top:7458px;left: 1250px;font-size: 20px;z-index: 2;">
+        捏泡泡</a>
+        <a href="https://bubblespop.netlify.app/" style="position:absolute;top:7500px;left: 1250px;font-size: 16px;">
+        赛博捏泡泡，你可以解压十秒，然后一直解压，捏很久很久，直到放松了自己的心情~
+     </a>
+
+
+     <a href="https://h1ghf1ve.me/?ref=8090.tech" target="_blank">
+        <img style="position:absolute;top:7640px;left: 1250px;z-index: 2;" src="网页8.jpg" width="380">
+    </a>
+    <a href="https://h1ghf1ve.me/?ref=8090.tech" style="position:absolute;top:8048px;left: 1250px;font-size: 20px;z-index: 2;">
+        give me five</a>
+        <a href="https://h1ghf1ve.me/?ref=8090.tech" style="position:absolute;top:8090px;left: 1250px;font-size: 16px;">
+        和全球的陌生人击掌！点击一下屏幕，如果同时间全世界有另外的人也点击了这个网站，你会获得和世界上其他国家的人赛博击掌的机会！
+     </a>
+
+
+     <a href="https://m.niucodata.com/cat/cat.php" target="_blank">
+        <img style="position:absolute;top:8230px;left: 1250px;z-index: 2;" src="网页9.jpg" width="380">
+    </a>
+    <a href="https://m.niucodata.com/cat/cat.php" style="position:absolute;top:8638px;left: 1250px;font-size: 20px;z-index: 2;">
+        听小猫咪打呼噜</a>
+        <a href="https://m.niucodata.com/cat/cat.php" style="position:absolute;top:8680px;left: 1250px;font-size: 16px;">
+        可以在线调制听小猫咪睡觉打呼噜，超级治愈的网站！戴上耳机享受更佳哦。
+     </a>
+
+
+     <a href="https://ezekielaquino.com/" target="_blank">
+        <img style="position:absolute;top:8820px;left: 1250px;z-index: 2;" src="网页10.jpg" width="380">
+    </a>
+    <a href="https://ezekielaquino.com/" style="position:absolute;top:9228px;left: 1250px;font-size: 20px;z-index: 2;">
+       音乐可视化</a>
+        <a href="https://ezekielaquino.com/" style="position:absolute;top:9270px;left: 1250px;font-size: 16px;">
+        听优美的钢琴音乐的同时可以看到音符在五线谱上的线条，充满视觉冲击！
+     </a>
+
+
+     <a href="https://ykob.github.io/sketch-threejs/" target="_blank">
+        <img style="position:absolute;top:9410px;left: 1250px;z-index: 2;" src="网页11.jpg" width="380">
+    </a>
+    <a href="https://ykob.github.io/sketch-threejs/" style="position:absolute;top:9818px;left: 1250px;font-size: 20px;z-index: 2;">
+        sketch of three.js</a>
+        <a href="https://ykob.github.io/sketch-threejs/" style="position:absolute;top:9860px;left: 1250px;font-size: 16px;">
+      超级厉害超级超级推荐的网站，通过js语言制作的非常精美的一些视觉作品和特效，可以享受不止十秒！
+      可以为网络艺术家和设计师提供新的思路和素材。
+     </a>
+
+
+     <a href="https://emojikitchen.dev/" target="_blank">
+        <img style="position:absolute;top:10000px;left: 1250px;z-index: 2;" src="网页12.jpg" width="380">
+    </a>
+    <a href="https://emojikitchen.dev/" style="position:absolute;top:10408px;left: 1250px;font-size: 20px;z-index: 2;">
+        emoji kitchen</a>
+        <a href="https://emojikitchen.dev/" style="position:absolute;top:10450px;left: 1250px;font-size: 16px;">
+            Google的emoji制作网站，可以选择左右两种emoji来定制一个组合成的emoji，十分有趣好玩！大胆的使用你的创意来制作emoji吧。
+      <br>
+      十秒钟可以制作自己的专属emoji！
+     </a>
+
+
+     <a href="https://sandspiel.club/" target="_blank">
+        <img style="position:absolute;top:10590px;left: 1250px;z-index: 2;" src="网页13.jpg" width="380">
+    </a>
+    <a href="https://sandspiel.club/" style="position:absolute;top:10998px;left: 1250px;font-size: 20px;z-index: 2;">
+        赛博沙盘</a>
+        <a href="https://sandspiel.club/" style="position:absolute;top:11040px;left: 1250px;font-size: 16px;">
+            网站的右侧展示了各种化学物质，如灰尘、火焰、石头、冰块、酸等等，可以任意选择在画面中添加，
+            打造属于自己的赛博沙盘世界。还会产生如燃烧、凝结、膨胀、生长等化学反应，非常有趣！
+     </a>
+
+
+     <a href="http://pf.bigpixel.cn/zh-CN.html" target="_blank">
+        <img style="position:absolute;top:11180px;left: 1250px;z-index: 2;" src="网页14.jpg" width="380">
+    </a>
+    <a href="http://pf.bigpixel.cn/zh-CN.html" style="position:absolute;top:11588px;left: 1250px;font-size: 20px;z-index: 2;">
+        千亿像素看世界</a>
+        <a href="http://pf.bigpixel.cn/zh-CN.html" style="position:absolute;top:11630px;left: 1250px;font-size: 16px;">
+           为全球70余个城市创作了互联网城市名片，放大万倍体验中国各个城市，
+           点开你想去的地方吧！再无限的放大，放大，享受千亿像素镜头下的世界。
+     </a>
+
+
+
+     <a href="10秒贪吃蛇复活.html" target="_blank">
+        <img style="position:absolute;top:11770px;left: 1250px;z-index: 2;" src="游戏6.jpg" width="380">
+    </a>
+    <a href="10秒贪吃蛇复活.html" style="position:absolute;top:12178px;left: 1250px;font-size: 20px;z-index: 2;">
+        又是经典的贪吃蛇游戏…</a>
+        <a href="10秒贪吃蛇复活.html" style="position:absolute;top:12220px;left: 1250px;font-size: 16px;">
+            不想再看广告了！！！
+      </a>
+
+
+        <p style="position: absolute;top:12350px;left: 1250px;color: antiquewhite;font-size: 16px;">
+            原来十秒还可以这样度过！
+            未完待续……
+        </p>
+
+
+
+
+
+
+
+     <a style="position:fixed;top:0%;color: antiquewhite;"
+       href="https://evens-world-virtuality-and-net-excercise-3-09a961f27ab66a26563f.gitlab.io/" target="_blank">
+       &copy;Even</a>
+
+
+</body>
+</html>

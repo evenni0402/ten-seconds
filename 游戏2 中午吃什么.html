@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中午吃什么</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a style="position:fixed;top:55px;left:30px;font-size: 20px;font-family: 'Courier New', Courier, monospace;"
+ href="关于10秒的网站.html" >back</a>
+ 
+    <img style="width: 1700px;position: absolute;top: 0%;left: 0%;z-index: -1;" src="food.jpg" >
+    <img style="width: 700px;position: absolute;top: 40%;left: 30%;" src="吃饭.gif" >
+
+    <h1>中午吃什么？</h1>
+    <button onclick="getRandomFood()">吃什么呢！</button>
+    <div id="result"></div>
+
+    <script>
+        alert("中午吃这个！")
+        function openPopup(){
+        }
+    </script> 
+
+    <script>
+        let clickCount = 0; 
+
+        function getRandomFood() {
+            // 可以在这里添加你想要的食物选项
+            let foods = ["炒饭", "拉面", "披萨", "寿司", "汉堡", "饺子", "火锅", "烤肉", "三明治", "麻辣烫",
+    "粥", "沙拉", "牛排", "炸鸡", "面包", "意大利面", "炸鱼", "寿喜烧", "豆浆油条", "鸡米花",
+    "包子", "烧卖", "黄焖鸡米饭", "鲁菜", "川菜", "粤菜", "苏菜", "闽菜", "浙菜", "湘菜",
+    "徽菜", "墨西哥卷饼", "法式奶油炖鸡", "西班牙海鲜饭", "印度咖喱", "日本寿司",
+    "泰国冬阴功汤", "韩国石锅拌饭", "意大利面", "越南春卷", "希腊沙拉", "德国香肠", "英国炸鱼薯条",
+    "巴西烤肉", "阿拉伯烤肉", "埃及法拉", "土耳其烤肉", "俄罗斯酸菜饼", "澳大利亚牛排", "加拿大枫糖浆",
+    "美国汉堡", "意大利披萨", "法国面包", "日本拉面", "中国火锅", "印度咖喱", "泰国绿咖喱", 
+    "河西食堂一楼", "河西食堂二楼","河东食堂一楼","河东食堂二楼", "丽娃食堂一楼", "丽娃食堂二楼", "丽娃西餐厅"];
+
+  
+
+            let index = Math.floor(Math.random() * foods.length); // 随机选择一个食物
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerText = "今天中午吃：" + foods[index];
+            clickCount++; // 增加点击计数
+
+            // 修改按钮文本为“不行，换一个”
+            document.querySelector("button").innerText = "不行，换一个";
+
+            // 如果点击次数达到两次，则触发警告消息
+            if (clickCount === 4) {
+                alert("还不满意？别吃了！");
+            }
+        }
+    </script>
+</body>
+</html>

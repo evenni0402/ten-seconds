@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 观看广告复活</title>
+  <meta
+  name="author"
+  content="Even">
+<meta
+  name="description"
+  content="Watch AD resurrect">
+  <link rel="icon"
+  href="10.jpg">
+
+  <script src="p5.min.js"></script>
+
+    <style>
+        .restart-button {
+            display: none;
+            position: absolute;
+            left: 680px;
+            top: 20px;
+            background-color: #ff0000;
+            color: white;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .like_button {
+        background-color: rgb(255, 0, 0);
+        color: black;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px black; 
+        position: absolute;left: 20%;top: 8%;
+    }
+    </style>
+
+</head>
+
+<body>
+    <video style="position:absolute;top: 0px;" id="myVideo" width="1220" height="850" controls autoplay>
+        <source src="广告6.mp4" type="video/mp4">
+        
+    </video>
+
+    <button class="restart-button" onclick="restartVideo()">复活小蛇继续游戏</button>
+
+    <script>
+        const video = document.getElementById("myVideo");
+        const restartButton = document.querySelector(".restart-button");
+
+        // 监听视频播放结束事件
+        video.addEventListener("ended", function() {
+            // 显示重新观看按钮
+            restartButton.style.display = "block";
+        });
+
+        // 点击重新观看按钮，重新播放视频
+        function restartVideo() {
+            alert("需要您再再次观看一个广告才可复活小蛇！您的余额为：2.8元");
+            restartButton.style.display = "none";
+            const iframe = document.createElement("iframe");
+                // 设置 iframe 的 src 属性为嵌套的 HTML 页面地址
+                iframe.src = "广告7.html";
+                // 设置 iframe 样式
+                iframe.style.position = "absolute";
+                iframe.style.left = "20px";
+                iframe.style.top = "20px";
+                iframe.style.width = "1280px";
+                iframe.style.height = "780px";
+                // 将 iframe 添加到页面中
+                document.body.appendChild(iframe); // 隐藏重新观看按钮
+        }
+    </script>
+
+
+
+</body>
+</html>

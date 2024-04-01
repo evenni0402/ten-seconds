@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>贪吃蛇</title>
+  <meta
+  name="author"
+  content="Even">
+<meta
+  name="description"
+  content="Ten seconds of life">
+
+  <link rel="icon"
+  href="10.jpg">
+
+<!--链接p5js程式库 / link the p5js library -->
+  <script src="p5.min.js"></script>
+
+<!--链接自己写的p5js文件 / link the p5js file you write -->
+  <script src="贪吃蛇游戏.js"></script>
+
+<style>
+   .like_button {
+        background-color: rgb(255, 0, 0);
+        color: black;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px black; 
+        position: absolute;left: 25%;top: 68%;
+    }
+
+    .no_button{
+      position: absolute;left: 85%;top:1000px;
+      background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+</style>
+
+</head>
+
+<body>
+    
+<a style="position:fixed;top:55px;right: 50px;font-size: 20px;font-family: 'Courier New', Courier, monospace;"
+href="关于10秒的网站.html" >back</a>
+
+    <script>
+        alert("贪吃蛇游戏！")
+        function openPopup(){
+        }
+    </script> 
+    <h3 style="position: absolute;left: 100px;top: 530px;">
+        先在黑色区域里任意点击
+        <br>
+        再使用 i j k 和 l 控制贪吃蛇
+        <br>注意不要让蛇碰到自己或者墙。
+    </h2>
+
+    <img style="width: 1600px;position: absolute;top: 0%;left: 0%;z-index: -1;" src="飘落爱心1.gif" >
+  
+   
+    <button id="restartButton" onclick="showNewButtons()" class="like_button">重新开始</button>
+
+   <script>
+    function showNewButtons() {
+        // 创建“支付3元开始游戏”按钮
+        const payButton = document.createElement("button");
+        payButton.textContent = "支付3元开始游戏";
+        payButton.onclick = function() {
+            alert("抱歉，您的余额为：0元");
+        };
+        // 设置支付按钮的样式
+        payButton.style.position = "absolute";
+        payButton.style.left = "650px";
+        payButton.style.top = "550px";
+        payButton.style.width = "250px";
+        payButton.style.height = "50px";
+        payButton.style.background = "red";
+        payButton.style.color = "white";
+
+
+        // 创建“观看广告免费复活”按钮
+        const watchAdButton = document.createElement("button");
+        watchAdButton.textContent = "观看10秒广告免费复活";
+        watchAdButton.onclick = function() {
+            alert("观看广告10秒并获得免费复活！");
+            const iframe = document.createElement("iframe");
+                // 设置 iframe 的 src 属性为嵌套的 HTML 页面地址
+                iframe.src = "10秒广告视频1.html";
+                // 设置 iframe 样式
+                iframe.style.position = "absolute";
+                iframe.style.left = "200px";
+                iframe.style.top = "0px";
+                iframe.style.width = "1400px";
+                iframe.style.height = "820px";
+                // 将 iframe 添加到页面中
+                document.body.appendChild(iframe);
+          
+            };
+
+        // 设置观看广告按钮的样式
+        watchAdButton.style.position = "absolute";
+        watchAdButton.style.left = "920px";
+        watchAdButton.style.top = "550px";
+        watchAdButton.style.width = "250px";
+        watchAdButton.style.height = "50px";
+        watchAdButton.style.background = "red";
+        watchAdButton.style.color = "white";
+
+
+
+        // 将新按钮添加到页面中
+        document.body.appendChild(payButton);
+        document.body.appendChild(watchAdButton);
+    }
+
+</script>
+
+<button onclick="redirectToOtherWebsite()" class="no_button">不想再看广告了！不想玩了！！</button>
+
+    <script>
+        function redirectToOtherWebsite() {
+            // 将下面的 URL 替换为您想要跳转到的网站的 URL
+            window.location.href = "10秒钟.html";
+        }
+    </script>
+    
+</body>
+</html>

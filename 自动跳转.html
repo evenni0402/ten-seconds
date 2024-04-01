@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Page Flip</title>
+    <style>
+        .page {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="page" id="page1"></div>
+    <div class="page" id="page2"></div>
+    <div class="page" id="page3"></div>
+
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPageIndex = 0;
+
+        function showPage(pageIndex) {
+            pages.forEach((page, index) => {
+                if (index === pageIndex) {
+                    page.style.display = 'block';
+                } else {
+                    page.style.display = 'none';
+                }
+            });
+        }
+
+        function fetchPage(pageIndex) {
+            fetch(`10秒挑战.html`) // 假设页面文件名为 page1.html, page2.html, ...
+                .then(response => response.text())
+                .then(html => {
+                    pages[pageIndex].innerHTML = html;
+                    setTimeout(nextPage, 10000); // 10秒后自动翻页
+                })
+                .catch(error => console.error('Error fetching page:', error));
+        }
+
+        function nextPage() {
+            currentPageIndex++;
+            if (currentPageIndex >= pages.length) {
+                currentPageIndex = 0;
+            }
+            showPage(currentPageIndex);
+            fetchPage(currentPageIndex);
+        }
+
+        showPage(currentPageIndex);
+        fetchPage(currentPageIndex);
+    </script>
+</body>
+</html>

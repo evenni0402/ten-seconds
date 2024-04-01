@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>祝我生日快乐</title>
+  
+<!--链接单独的css文件 / link the separate css file-->
+  <link href="style.css" rel="stylesheet" />
+<!--链接p5js程式库 / link the p5js library -->
+  <script src="p5.min.js"></script>
+<!--链接自己写的p5js文件 / link the p5js file you write -->
+  <script src="游戏5 生日.js"></script>
+
+  <style>
+    #text {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        color: rgb(197, 18, 18); /* 修改文本颜色 */
+            position: absolute; /* 设置文本位置为绝对定位 */
+            top: 20%; /* 位于页面上方的50%位置 */
+            left: 50%; /* 位于页面左侧的50%位置 */
+            transform: translate(-50%, -50%);
+    }
+</style>
+
+</head>
+
+<script>
+    alert("10秒钟可以说一句生日祝福！")
+    function openPopup(){
+    }
+</script> 
+
+<body style="background-color:rgb(0, 0, 0);">
+
+  <a style="position:fixed;top:55px;left:30px;font-size: 20px;font-family: 'Courier New', Courier, monospace;"
+ href="关于10秒的网站.html" >back</a>
+
+ <img style="width: 520px;position: absolute;top: 35%;left: 35%;" src="游戏5生日蛋糕.gif" >
+
+ <audio style="position:absolute;top:595px;left:140px" src="生日快乐.m4a" controls></audio>
+
+ <div id="text"></div>
+
+    <script>
+        const textElement = document.getElementById('text');
+        const textContent = '祝我二十岁生日快乐！祝所有人都健康幸福快乐！'; // 您想要逐字显示的文本内容
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#00ffff', '#ff00ff']; // 颜色数组
+        let index = 0;
+
+        function showNextLetter() {
+            if (index < textContent.length) {
+                const color = colors[Math.floor(Math.random() * colors.length)]; // 从颜色数组中随机选择一个颜色
+                const letter = `<span style="color: ${color};">${textContent[index]}</span>`; // 使用span元素包裹字，并设置颜色
+                textElement.innerHTML += letter;
+                index++;
+                setTimeout(showNextLetter, 180); // 控制每个字出现的时间间隔（毫秒）
+            }
+        }
+
+        showNextLetter();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Who are you</title>
+    <meta charset="utf-8">
+    <meta
+    name="author"
+    content="Even">
+  <meta
+    name="description"
+    content="Who are you">
+
+    <link rel="icon"
+    href="黑背景大海.gif">
+
+    <style>
+            .like_button {
+        background-color: rgb(245, 61, 92);
+        color: black;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px black; 
+    }
+
+    .like_button:hover{
+        background-color: blue;
+        border-radius: 0px;
+    }
+    </style>
+</head>
+
+<body style="background-color:rgb(0, 0, 0);">
+    <script>
+        alert("你有想过“我”到底是谁吗？")
+        function openPopup(){
+        }
+    </script> 
+
+<label for="name" style="position: absolute;top: 0px;left: 50%;">Please fill in:</label>
+<input type="text" placeholder="your name">
+<br>
+<button class="like_button" onclick="showImage()">ME</button>
+
+<script>
+    function showImage() {
+        var img = document.createElement('img');
+        img.src = '黑背景动.gif'; // 替换 'image.jpg' 为你要显示的图片路径
+        document.body.appendChild(img);
+    }
+</script>
+
+    <img style="width: 1600px;position: absolute;top: 0%;left: 0%;z-index: -1;" src="黑背景流沙.gif" >
+
+    <a href="一颗粒子.html" target="_blank">
+        <img style="position:absolute;top:0px;left:700px" src="黑背景圆环.gif" width="160">
+</a>
+    <a href="flower.html" target="_blank">
+    <img style="position:absolute;top:20px;right:0px" src="星星银色.gif" width="100">
+</a>
+
+
+
+
+
+</body>
+</html>

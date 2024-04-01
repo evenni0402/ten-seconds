@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 观看广告复活</title>
+  <meta
+  name="author"
+  content="Even">
+<meta
+  name="description"
+  content="Watch AD resurrect">
+  <link rel="icon"
+  href="10.jpg">
+
+  <script src="p5.min.js"></script>
+
+    <style>
+        .restart-button {
+            display: none;
+            position: absolute;
+            left: 680px;
+            top: 20px;
+            background-color: #ff0000;
+            color: white;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .like_button {
+        background-color: rgb(255, 0, 0);
+        color: black;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px black; 
+        position: absolute;left: 20%;top: 8%;
+    }
+    </style>
+
+</head>
+
+<body>
+    <video style="position:absolute;top: 0px;" id="myVideo" width="1120" height="800" controls autoplay>
+        <source src="广告9.mp4" type="video/mp4">
+        
+    </video>
+
+    <button class="restart-button" onclick="restartVideo()">复活小蛇继续游戏</button>
+
+    <script>
+        const video = document.getElementById("myVideo");
+        const restartButton = document.querySelector(".restart-button");
+
+        // 监听视频播放结束事件
+        video.addEventListener("ended", function() {
+            // 显示重新观看按钮
+            restartButton.style.display = "block";
+        });
+
+        // 点击重新观看按钮，重新播放视频
+        function restartVideo() {
+            alert("恭喜你成功获得复活小蛇的机会！您的余额为：3元");
+            restartButton.style.display = "none";
+            window.open("10秒贪吃蛇复活.html", "_blank");
+        }
+       
+    </script>
+
+
+
+</body>
+</html>

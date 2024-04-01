@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>十秒钟</title>
+<style>
+  .text-container {
+    font-size:37px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    position: relative; /* 设置文本容器为相对定位 */
+    left: 20px;
+    top: 200px; /* 调整垂直位置为页面的中间 */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 50px; /* 设置每行文本之间的间距 */
+  }
+  .custom-link {
+    font-size: 30px; /* 改变字体大小 */
+    display: block; /* 将超链接作为块级元素 */
+    position: relative; /* 设置文本容器为相对定位 */
+    left: 15px;
+    top: 200px; 
+    margin-top: 20px; /* 上边距 */
+    text-decoration: none; /* 移除下划线 */
+    color: blue; /* 蓝色字体颜色 */
+  }
+</style>
+
+<script src="p5.min.js"></script>
+<script src="跳动数字2.js"></script>
+
+</head>
+
+
+<body style="background-color: black;">
+<div class="text-container" id="text1"></div>
+<div class="text-container" id="text2"></div>
+<div class="text-container" id="text3"></div>
+
+
+<script>
+  // 要逐字显示的文本
+  var textsToShow = [
+    "在网络世界中，你有关注过自己的每个“十秒钟”是怎么度过的吗？",
+    "你有过在玩游戏的时候看十秒钟广告复活，在平台看十秒直播可以获得0.01元，看十秒钟广告可以免费读小说、免费用需要付费的笔刷等等经历吗？",
+    "或许你陷入了“十秒钟”陷阱！"
+
+  ];
+
+  // 获取文本容器元素
+  var textContainers = [
+    document.getElementById("text1"),
+    document.getElementById("text2"),
+    document.getElementById("text3")
+  ];
+
+  // 逐行显示文本
+  for (var i = 0; i < textsToShow.length; i++) {
+    showText(textsToShow[i], textContainers[i], i * 7000); // 每行文本延迟显示
+  }
+
+  function showText(text, container, delay) {
+    var currentIndex = 0;
+    setTimeout(function() {
+      var timer = setInterval(function() {
+        if (currentIndex < text.length) {
+          container.innerHTML += text[currentIndex];
+          currentIndex++;
+        } else {
+          clearInterval(timer);
+          if (container.id === "text3") {
+            setTimeout(function() {
+              // 添加新的文本和超链接
+              var newElement = document.createElement("div");
+              newElement.innerHTML = "<a href='关于10秒的网站.html'><span class='custom-link'>About the 'ten second' trap</span></a>";
+              container.appendChild(newElement);
+            }, 3000); // 2秒后显示新的文本和超链接
+          }
+        }
+      }, 100); // 每隔100毫秒显示一个字
+    }, delay); // 设置延迟时间
+  }
+
+ 
+</script>
+</body>
+</html>
